@@ -13,7 +13,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.client.RestTemplate;
 
-import com.avaliacao.meeting_agenda.view.CpfApiResponse;
+import com.avaliacao.meeting_agenda.dto.CpfApiResponse;
 
 import lombok.extern.slf4j.Slf4j;
 

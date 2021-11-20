@@ -8,9 +8,9 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.expression.AccessException;
 import org.springframework.stereotype.Service;
 
-import com.avaliacao.meeting_agenda.document.MeetingAgenda;
 import com.avaliacao.meeting_agenda.exception.ExistingElementException;
 import com.avaliacao.meeting_agenda.exception.NotFoundException;
+import com.avaliacao.meeting_agenda.model.MeetingAgenda;
 import com.avaliacao.meeting_agenda.repository.MeetingAgendaRepository;
 import com.avaliacao.meeting_agenda.util.Util;
 

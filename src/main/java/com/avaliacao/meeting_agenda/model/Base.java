@@ -1,4 +1,4 @@
-package com.avaliacao.meeting_agenda.document;
+package com.avaliacao.meeting_agenda.model;
 
 import java.time.LocalDateTime;
 

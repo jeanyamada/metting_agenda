@@ -1,4 +1,4 @@
-package com.avaliacao.meeting_agenda.view;
+package com.avaliacao.meeting_agenda.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

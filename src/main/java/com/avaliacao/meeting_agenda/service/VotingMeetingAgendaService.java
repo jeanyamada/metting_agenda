@@ -15,13 +15,13 @@ import org.springframework.data.mongodb.core.aggregation.AggregationResults;
 import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.stereotype.Service;
 
-import com.avaliacao.meeting_agenda.document.MeetingAgenda;
-import com.avaliacao.meeting_agenda.document.VotingMeetingAgenda;
+import com.avaliacao.meeting_agenda.dto.VotingMeetingAgendaTotal;
 import com.avaliacao.meeting_agenda.exception.ExistingElementException;
 import com.avaliacao.meeting_agenda.exception.NotFoundException;
+import com.avaliacao.meeting_agenda.model.MeetingAgenda;
+import com.avaliacao.meeting_agenda.model.VotingMeetingAgenda;
 import com.avaliacao.meeting_agenda.repository.VotingMeetingAgendaRepository;
 import com.avaliacao.meeting_agenda.util.Util;
-import com.avaliacao.meeting_agenda.view.VotingMeetingAgendaTotal;
 
 import lombok.extern.slf4j.Slf4j;
 

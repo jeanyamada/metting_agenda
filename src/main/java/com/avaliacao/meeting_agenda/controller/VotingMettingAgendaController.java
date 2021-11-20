@@ -14,11 +14,11 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.avaliacao.meeting_agenda.document.VotingMeetingAgenda;
+import com.avaliacao.meeting_agenda.dto.VotingMeetingAgendaTotal;
 import com.avaliacao.meeting_agenda.exception.ExistingElementException;
 import com.avaliacao.meeting_agenda.exception.NotFoundException;
+import com.avaliacao.meeting_agenda.model.VotingMeetingAgenda;
 import com.avaliacao.meeting_agenda.service.VotingMeetingAgendaService;
-import com.avaliacao.meeting_agenda.view.VotingMeetingAgendaTotal;
 
 
 @RestController

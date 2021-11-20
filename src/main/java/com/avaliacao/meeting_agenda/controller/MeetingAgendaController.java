@@ -11,9 +11,9 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.avaliacao.meeting_agenda.document.MeetingAgenda;
 import com.avaliacao.meeting_agenda.exception.ExistingElementException;
 import com.avaliacao.meeting_agenda.exception.NotFoundException;
+import com.avaliacao.meeting_agenda.model.MeetingAgenda;
 import com.avaliacao.meeting_agenda.service.MeetingAgendaService;
 
 @RestController
