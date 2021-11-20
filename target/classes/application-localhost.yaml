@@ -1,0 +1,28 @@
+# ===============================
+# SERVER PORT
+# ===============================
+server:
+  port: 8086
+  
+# ===============================
+# DATA SOURCES
+# ===============================
+spring:
+  data:
+    mongodb:
+      uri: mongodb+srv://avaliacaoTecnica:e0ENrJVpTc0EbB6n@avaliacaotecnica.bfjim.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
+
+
+# ===============================
+# OPEN SESSION DEFAULT MINUTES
+# ===============================
+
+time:
+  default: 1
+  
+
+# ===============================
+# CPF VALIDATION API  
+# ===============================    
+cpf:
+  validation: https://user-info.herokuapp.com/users/
