@@ -1,5 +1,5 @@
 # meeting_agenda
-# Avaliação Técnica
+# Gerenciar e participar dessas sessões de votação
 Neste microserviço é possível criar pautas, abrir sessões de votação em pautas, votar em pautas que estejam com sessão de votação aberta, vizualizar resultados de votação em pautas.
 # Execução do serviço
 ### Para a correta execução do serviço a máquina em que ele será executado deve obedecer as seguintes dependências:
