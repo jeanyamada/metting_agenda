@@ -24,21 +24,11 @@ public class MeetingAgendaService {
 	private Long timeDefault;
 
 	@Autowired
-	private UserService userService;
-
-	@Autowired
 	private MeetingAgendaRepository meetingAgendaRepository;
 
 	public MeetingAgenda insertMeetingAgenda(MeetingAgenda data) throws ExistingElementException, AccessException {
 
 		log.info("started insertMeetingAgenda");
-
-		if (!userService.validateUserCpf(data.getUserCpf())) {
-			String info = String.format("user: [%s] does not have a valid CPF: [%s]", data.getUsername(),
-					data.getUserCpf());
-			log.error(info);
-			throw new AccessException(info);
-		}
 
 		String meetingAgendaId = idGenerator(data.getMeetingAgendaName());
 		MeetingAgenda meetingAgenda = findById(meetingAgendaId);
@@ -63,13 +53,6 @@ public class MeetingAgendaService {
 	public MeetingAgenda startVotingSession(MeetingAgenda data) throws NotFoundException, AccessException {
 
 		log.info("started startVotingSession");
-
-		if (!userService.validateUserCpf(data.getUserCpf())) {
-			String info = String.format("user: [%s] does not have a valid CPF: [%s]", data.getUsername(),
-					data.getUserCpf());
-			log.error(info);
-			throw new AccessException(info);
-		}
 
 		String meetingAgendaId = idGenerator(data.getMeetingAgendaName());
 
