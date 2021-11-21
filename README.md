@@ -7,7 +7,7 @@ Neste microserviço é possível criar pautas, abrir sessões de votação em pa
   - JDK 1.8
   - MongoDB 4.4.10
   - Maven command line (caso prefira gerar o jar utilizando a linha de comando ao invés de utilizar uma IDE como o STS)
-  - Guia de instalação official: https://maven.apache.org/install.html
+    - Guia de instalação official: https://maven.apache.org/install.html
    - Um guia mais detalhado para o windows pode ser encontrado em https://mkyong.com/maven/how-to-install-maven-in-windows/
  ### Após a instalação das dependências devem ser executados os passos abaixo:
  - Clonar ou fazer o download do projeto: https://github.com/jeanyamada/metting_agenda.git
