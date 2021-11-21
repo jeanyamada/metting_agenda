@@ -40,4 +40,18 @@ public class MeetingAgenda extends Base {
 		this.sessionTimeMax = sessionTimeMax;
 	}
 
+	public MeetingAgenda(@NotBlank(message = "The username must contain at least one character") String username,
+			@NotBlank(message = "The userCpf must contain at least one character") String userCpf,
+			LocalDateTime lastedUpdateDate,
+			@NotBlank(message = "The votingSessionName must contain at least one character") String meetingAgendaName,
+			String meetingAgendaDescription, LocalDateTime votingSessionStart, LocalDateTime votingSessionEnd,
+			Long sessionTimeMax) {
+		super(null, username, userCpf, lastedUpdateDate);
+		this.meetingAgendaName = meetingAgendaName;
+		this.meetingAgendaDescription = meetingAgendaDescription;
+		this.votingSessionStart = votingSessionStart;
+		this.votingSessionEnd = votingSessionEnd;
+		this.sessionTimeMax = sessionTimeMax;
+	}
+
 }

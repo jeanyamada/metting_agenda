@@ -24,13 +24,16 @@ public class MeetingAgendaService {
 	private Long timeDefault;
 
 	@Autowired
+	private UserService userService;
+
+	@Autowired
 	private MeetingAgendaRepository meetingAgendaRepository;
 
 	public MeetingAgenda insertMeetingAgenda(MeetingAgenda data) throws ExistingElementException, AccessException {
 
 		log.info("started insertMeetingAgenda");
 
-		if (!Util.validateUserCpf(data.getUserCpf())) {
+		if (!userService.validateUserCpf(data.getUserCpf())) {
 			String info = String.format("user: [%s] does not have a valid CPF: [%s]", data.getUsername(),
 					data.getUserCpf());
 			log.error(info);
@@ -61,7 +64,7 @@ public class MeetingAgendaService {
 
 		log.info("started startVotingSession");
 
-		if (!Util.validateUserCpf(data.getUserCpf())) {
+		if (!userService.validateUserCpf(data.getUserCpf())) {
 			String info = String.format("user: [%s] does not have a valid CPF: [%s]", data.getUsername(),
 					data.getUserCpf());
 			log.error(info);

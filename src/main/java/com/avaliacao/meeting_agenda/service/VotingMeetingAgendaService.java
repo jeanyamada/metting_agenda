@@ -34,6 +34,9 @@ public class VotingMeetingAgendaService {
 
 	@Autowired
 	private MeetingAgendaService meetingAgendaService;
+	
+	@Autowired
+	private UserService userService;
 
 	@Autowired
 	private MongoTemplate mongoTemplate;
@@ -45,7 +48,7 @@ public class VotingMeetingAgendaService {
 
 		LocalDateTime current = LocalDateTime.now();
 
-		if (!Util.validateUserCpf(data.getUserCpf())) {
+		if (!userService.validateUserCpf(data.getUserCpf())) {
 			String info = String.format("user: [%s] does not have a valid CPF: [%s]", data.getUsername(),
 					data.getUserCpf());
 			log.error(info);
@@ -116,6 +119,9 @@ public class VotingMeetingAgendaService {
 
 	public VotingMeetingAgenda save(VotingMeetingAgenda votingMeetingAgenda) {
 		return votingMeetingAgendaRepository.save(votingMeetingAgenda);
+	}
+	public void remove(VotingMeetingAgenda votingMeetingAgenda) {
+		votingMeetingAgendaRepository.delete(votingMeetingAgenda);
 	}
 
 	public String idGenerator(String userCpf, String meetingAgendaName) {
