@@ -70,7 +70,7 @@ class VotingMeetingAgendaApplicationTests {
 		try {
 			VotingMeetingAgenda result = votingMeetingAgendaService.insertVotingMeetingAgenda(votingMeetingAgenda);
 
-			Assertions.assertEquals(result.getMeetingAgendaName(), result.getMeetingAgendaName());
+			Assertions.assertEquals(votingMeetingAgenda.getMeetingAgendaName(), result.getMeetingAgendaName());
 
 			List<VotingMeetingAgendaTotal> total = votingMeetingAgendaService
 					.votingResult(result.getMeetingAgendaName());
